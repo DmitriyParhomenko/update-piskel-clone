@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Piskel Clone</title>
+
+  <link rel="shortcut icon" type="image/png" href="https://dmitriyparhomenko.github.io/piskel-clone/favicon/favicon.ico" />
+</head>
+ 
+<body>
+  <header class="header">
+      <div class="container">
+        <div class="header-item">
+          <a class="header-item-logo" href="#">
+            <img src="./../../images/logo-site.png" alt="Piskel clone">
+          </a>
+        </div>
+        <div class="header-title">New Piskel</div>
+      </div> 
+    </header> 
+
+  <main class="main row">
+
+    <div class="tools column">
+      <div class="tools__container">
+        <ul class="tools__wrapper row">
+          <li class="tools__item highlight_tool pencil" data-tool="pen" title="Pen (P)">
+            <img src="./../../images/tools/pencil.svg" alt="pencil">
+          </li>
+          <li class="tools__item" data-tool="paint-bucket" title="Paint bucket (B)">
+            <img src="./../../images/tools/back.svg" alt="fill">
+          </li>
+          <li class="tools__item" data-tool="eraser" title="Eraser tool (E)">
+              <img src="./../../images/tools/last.svg" alt="eraser">
+          </li>
+          <li class="tools__item" data-tool="rectangle" title="Rectangle tool (R)">
+              <img src="./../../images/tools/sqr.svg" alt="square">
+          </li>
+          <li class="tools__item" data-tool="move" title="Move tool (M)">
+              <img src="./../../images/tools/move.svg" alt="move">
+          </li>
+          <li class="tools__item" data-tool="color-picker" title="Color picker (O)">
+              <img src="./../../images/tools/pip.svg" alt="pipette">
+          </li>
+        </ul>
+      </div>
+      <div class="tools__picker-container">
+        <input class="tools__picker-item secondary-color" type="color" id="secondary-color" name="secondary"
+          value="#1B22AC">
+        <input class="tools__picker-item primary-color" type="color" id="primary-color" name="primary" value="#D95949">
+          <img src="./../../images/tools/duplicate.svg" id="switch-colors" alt="change">
+      </div>
+      <div class="tools__keybord-container"></div>
+    </div>
+
+    <div class="frames__wrapper">
+      <div class="frame__background">
+        <div class="frame__unit">
+          <div class="frame__item-button  hide-button">
+            <img class="copy" src="./../../images/tools/duplicate.svg" alt="duplicate">
+          </div>
+          <div class="frame__item-button index">1</div>
+          <div class="frame__item-button hide-button">
+              <img class="trash" src="./../../images/tools/remove.svg" alt="remove">
+          </div>
+          <div class="frame__item-button move-frame drag-item hide-button">
+              <img class="move-frame move" src="./../../images/tools/move.svg" alt="move">
+          </div>
+        </div>
+      </div>
+
+      <div class="frames__add-frame-button">
+        New frame
+      </div>
+    </div>
+
+    <div class="canvas column" id="canvas__wrapper">
+      <div class="canvas__background">
+        <canvas class="canvas__item" width="800" height="800"></canvas>
+        <canvas class="canvas__buffer" width="800" height="800"></canvas>
+      </div>
+    </div>
+
+    <div class="preview column">
+      <div class="preview__window">
+        <div class="preview__background">
+          <div class="preview__item">
+            <img id="fullScreen" src="./../../images/tools/move.svg" alt="Resize">
+          </div>
+        </div>
+        <div class="preview__fps-wrapper">
+          <div class="preview__fps-number" id="show-fps">10 FPS</div>
+          <input id="fps" class="fps" type="range" min="0" max="24" step="1" value="10">
+        </div>
+
+      <div class="preview__data-wrapper">
+        <div class="preview__data canvas_size" id="canvas_size">
+          [ 32 x 32 ]
+        </div>
+        <div class="preview__data coordinates" id="coordinates">
+          1 : 1
+        </div>
+      </div>
+    </div>
+
+    <div class="features column">
+      <div class="features__button resize__button" title="Resize">
+        <img src="./../../images/tools/move.svg" alt="Resize">
+      </div>
+      <div class="resize__info">
+        32 / 32
+      </div>
+      <a class="download__button apng__download" href="#" download="animated-image-png" title="Download PNG">
+        PNG
+      </a>
+      <a class="download__button gif__download" href="#" title="Download GIF">
+        GIF
+      </a>
+    </div>
+  </main>
+</body>
+</html>

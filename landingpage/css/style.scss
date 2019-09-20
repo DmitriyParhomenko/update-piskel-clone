@@ -1,0 +1,200 @@
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+img,
+object,
+embed {max-width: 100%;}
+
+html {overflow-y: scroll;}
+
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+
+small {font-size: 85%;}
+
+strong {font-weight: bold;}
+
+td, td img {vertical-align: top;}
+
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {cursor: pointer;}
+
+button, input, select, textarea {margin: 0;}
+
+button,
+/*input[type=button] {width: auto; overflow: visible;}*/
+
+body {
+	background: #5d5d5d8c;
+}
+
+.header {
+	box-shadow: 0 0 25px;
+	padding: 12px 20px 12px 30px;
+	position: relative;
+	background: #000;
+	margin-bottom: 60px;
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: unset;
+	}
+	a {
+		margin-right: 40px;
+	}
+	&-item {
+		display: flex;
+		align-items: center;
+		&-logo {
+			img {
+				width: 100px;
+			}
+		}
+	}
+	&-title {
+		font-family: 'Roboto-Medium';
+		font-size: 20px;
+		color: gray;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.main {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	&-descr {
+		padding: 20px;
+		width: 50%;
+		&__item {
+			padding: 80px;
+		}
+		h1 {
+			font-size: 30px;
+			font-weight: bold;
+			margin-bottom: 10px;
+			color: #fff;
+		}
+		h2 {
+			font-size: 18px;
+			color: gray;
+			margin-bottom: 35px;
+			a {
+				text-decoration: none;
+				color: darkred;
+				font-weight: bold;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&-btn {
+		a {
+			background-color: #e4c20b;
+			padding: 11px;
+			border-radius: 5px;
+			text-decoration: none;
+			color: darkred;
+			font-weight: bold;
+			&:hover {
+				background-color: #fff;
+			}
+		}
+	}
+	&-preview {
+		width: 50%;
+    text-align: center;
+		img {
+			width: 94%;
+		}
+	}
+}
+
+.example {
+	width: 90%;
+	margin: 0 auto;
+	padding: 65px 0;
+	h2 {
+		font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 23px;
+    color: #fff;
+    padding-left: 95px;
+	}
+	&-items {
+		display: flex;
+		&__item {
+			text-align: center;
+			img {
+				width: 75%;
+			}
+		}
+	}
+}
+

@@ -11,7 +11,6 @@ module.exports = {
   devtool: 'source-map',
   module: {
     rules: [
-      { enforce: 'pre', test: /\.js$/, loader: 'eslint-loader' },
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
@@ -32,12 +31,16 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(gif|jpe?g)$/,
         use: [
           {
             loader: 'file-loader',
-          },
-        ],
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/'
+            }
+          }
+        ]
       },
     ],
   },
@@ -46,4 +49,5 @@ module.exports = {
       template: './src/view/canvas/index.html',
     }),
   ],
+  watch: true
 };

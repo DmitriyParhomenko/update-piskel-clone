@@ -19,7 +19,7 @@ li {
 }
 
 body {
-  background: rgba(93,93,93,.55);
+  background: rgb(0 0 0 / 55%);
   user-select:none;
 }
 
